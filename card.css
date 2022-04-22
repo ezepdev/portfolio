@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@700&family=Karla:wght@600&family=Rajdhani:wght@600&family=Roboto+Mono:wght@200;500&family=Space+Mono&display=swap");
+
+.card-container {
+  max-width: 100%;
+  min-height: 400px;
+  height: 100vh;
+  position: relative;
+}
+
+.card-img-container {
+  width: 100%;
+  height: 100%;
+}
+
+.card-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-container::before {
+  content: "";
+  position: absolute;
+  background-color: #0009;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+}
+
+.card-container:hover::before {
+  width: 100%;
+  height: 100%;
+  transition: width 0.4s ease;
+}
+
+.card-container:hover > .card-details {
+  display: block;
+}
+
+.card-details {
+  display: none;
+  position: absolute;
+  color: #fff;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+
+.card-details > div {
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.card-details h3 {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 32px;
+}
+
+.card-details p {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+.card-buttons {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card-buttons li {
+  position: relative;
+}
+
+.card-buttons a:hover p,
+.card-buttons a:hover i {
+  color: #fff;
+  transition: all 0.2s ease;
+  transform: scale(1.1);
+}
+
+.card-buttons a {
+  color: #fff9;
+}
+
+.card-buttons a i {
+  font-size: 36px;
+}
