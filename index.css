@@ -12,7 +12,7 @@ body {
 
 .main-header {
   width: 100%;
-  padding: 2vh 0;
+  max-height: 5vh;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -20,6 +20,7 @@ body {
 
 .contact {
   font-weight: 500;
+  padding: 20px;
   text-transform: uppercase;
   font-size: 0.9rem;
   font-family: "Rajdhani", sans-serif;
@@ -33,13 +34,13 @@ body {
 /* PRESENTATION SECTION */
 
 .presentation {
-  width: 75%;
-  height: 100vh;
+  width: 80%;
+  height: 95vh;
   flex-wrap: wrap;
-  margin-top: 20px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .presentation h2 {
@@ -78,13 +79,55 @@ body {
 }
 
 .presentation-image-container {
-  height: 80vh;
+  max-height: 700px;
+  height: 100%;
   width: 65%;
 }
 
 .presentation-image {
   max-width: 100%;
   height: 100%;
+}
+
+/* NAVIGATION */
+
+nav {
+  width: 100%;
+  margin-bottom: 3vh;
+}
+
+.navigation {
+  display: flex;
+  width: 40%;
+  height: 100%;
+  margin: 0 auto;
+  list-style: none;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Space Mono", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.navigation a {
+  color: #292929;
+  text-decoration: none;
+}
+
+.navigation a p {
+  color: inherit;
+  text-transform: uppercase;
+}
+
+.navigation a.active {
+  color: #ff483b;
+}
+.navigation a:active p {
+  transform: scale(1.2);
+}
+
+.navigation a:hover {
+  color: #ff483b;
 }
 
 @media screen and (max-width: 800px) {
@@ -129,45 +172,6 @@ body {
 }
 .social-networks-links li:nth-child(3) a:hover {
   color: #1da1f2;
-}
-
-/* NAVIGATION */
-
-nav {
-  width: 100%;
-}
-
-.navigation {
-  display: flex;
-  width: 30%;
-  margin: 0 auto;
-  list-style: none;
-  justify-content: space-evenly;
-  align-items: center;
-  font-family: "Space Mono", sans-serif;
-  text-transform: uppercase;
-  font-size: 1.1rem;
-}
-
-.navigation a {
-  color: #292929;
-  text-decoration: none;
-}
-
-.navigation a p {
-  color: inherit;
-  text-transform: uppercase;
-}
-
-.navigation a.active {
-  color: #ff483b;
-}
-.navigation a:active p {
-  transform: scale(1.2);
-}
-
-.navigation a:hover {
-  color: #ff483b;
 }
 
 /* ABOUT-ME SECTION */
@@ -259,10 +263,10 @@ nav {
 }
 
 .about-me-left-layout a > div {
+  border-top-right-radius: 1rem;
   text-align: center;
   padding: 0;
   border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
   font-size: 1.3rem;
   background-color: white;
   font-family: "Space Mono", sans-serif;
@@ -326,6 +330,7 @@ nav {
   position: relative;
   width: 100%;
   height: 100%;
+  min-height: 100vh;
   display: flex;
   background-color: #292929;
 }
@@ -344,7 +349,7 @@ nav {
   text-transform: uppercase;
   writing-mode: vertical-lr;
   text-orientation: upright;
-  font-size: 6vh;
+  font-size: 7vh;
   color: white;
 }
 
