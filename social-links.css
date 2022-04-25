@@ -1,0 +1,29 @@
+/* SOCIAL-NETWORKS SECTION */
+
+.social-networks-links {
+  position: absolute;
+  top: 50%;
+}
+
+.social-networks-links ul {
+  list-style: none;
+}
+
+.social-networks-links li {
+  padding: 0.7rem 0;
+}
+
+.social-networks-links a {
+  color: #5a5555;
+}
+
+.social-networks-links li:first-child a:hover {
+  color: #e1306c;
+}
+
+.social-networks-links li:nth-child(2) a:hover {
+  color: #3b5998;
+}
+.social-networks-links li:nth-child(3) a:hover {
+  color: #1da1f2;
+}
