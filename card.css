@@ -1,9 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Jura:wght@700&family=Karla:wght@600&family=Rajdhani:wght@600&family=Roboto+Mono:wght@200;500&family=Space+Mono&display=swap");
 
 .card-container {
-  max-width: 100%;
-  min-height: 300px;
-  height: 100%;
+  flex: 1;
   position: relative;
 }
 
@@ -16,6 +14,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: left;
 }
 
 .card-container::before {
@@ -38,48 +37,49 @@
   display: block;
 }
 
+/* CARD DETAILS ON HOVER CARD */
+
 .card-details {
-  display: none;
   position: absolute;
-  color: #fff;
-  height: 100%;
-  text-align: center;
+  display: none;
   top: 0;
-  width: 100%;
+  padding: 0 50px;
+  color: #fff;
+  width: 80%;
+  height: 100%;
 }
 
 .card-details > div {
   position: relative;
-  flex-direction: column;
   display: flex;
-  justify-content: space-evenly;
-  align-content: center;
   width: 100%;
   height: 100%;
+  flex-direction: column;
+  font-family: "Rajdhani", sans-serif;
 }
 
 .card-details h3 {
-  width: 50%;
-  margin: 0 auto;
-  font-size: 32px;
+  width: 100%;
+  font-size: 48px;
 }
 
 .card-details p {
-  width: 50%;
-  margin: 0 auto;
-  font-size: 20px;
+  width: 100%;
+  font-size: 36px;
+  font-family: "Space Mono", monospace;
 }
 
 .card-buttons {
   list-style: none;
   padding: 0;
-  width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  position: absolute;
+  top: 500px;
 }
 
 .card-buttons li {
   position: relative;
+  margin: 0 10px;
 }
 
 .card-buttons a:hover p,
@@ -95,4 +95,23 @@
 
 .card-buttons a i {
   font-size: 36px;
+}
+
+@media screen and (max-width: 760px) {
+  .card-img-container {
+    height: 400px;
+    width: 100%;
+  }
+
+  .card-details p {
+    width: 90%;
+    top: 20px;
+    font-size: 1.2rem;
+    font-family: "Space Mono", monospace;
+    align-items: start;
+  }
+
+  .card-buttons {
+    top: 320px;
+  }
 }
